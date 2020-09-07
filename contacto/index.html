@@ -29,20 +29,39 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      body {
+        background-color: azure;
+      }
+    </style>
+    <script>
+      $(window).ready(function () {
+        alert("este formulario es funcional, por favor sea ubicado");
+      });
+    </script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/acerca-de/">acerca de</a></li>
-            <li><a href="/proyectos/">proyectos</a></li>
-            <li><a href="/contacto/">contacto</a></li>
-          </ul>
-        <div>
-            <img src="" alt="github">
-            <img src="" alt="instagram">
-            <img src="" alt="facebook">
+          <a href="/"><li>home</li></a>
+          <a href="/acerca-de/"><li>acerca de</li></a>
+          <a href="/proyectos/"><li>proyectos</li></a>
+          <a href="/contacto/"><li>contacto</li></a>
+        </ul>
+        <div class="container">
+          <div class="row" id="socialIcons">
+            <div class="col-sm">
+              <a><img src="../src/images/Octicons-mark-github.svg" alt="github" /></a>
+            </div>
+            <div class="col-sm">
+              <a><img src="../src/images/Instagram_logo_2016.svg" alt="instagram" /></a>
+            </div>
+            <div class="col-sm">
+              <a><img src="../src/images/F_icon.svg" alt="facebook" /></a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -51,19 +70,19 @@
       <form action="https://getform.io/f/97727371-d58f-46ef-a827-dab4209b654a" method="POST">
         <div>
           <label>Nombre:</label>
-          <input type="text" name="nombre" required/>
+          <input type="text" name="nombre" required />
         </div>
         <div>
           <label>Email:</label>
-          <input type="email" name="email" required/>
+          <input type="email" name="email" required />
         </div>
         <div>
           <label>Telefono:</label>
-          <input type="tel" name="telefono"/>
+          <input type="tel" name="telefono" />
         </div>
         <div>
           <label>Mensaje: </label>
-          <input type="text" name="mensaje" required>
+          <input type="text" name="mensaje" required />
         </div>
         <button type="submit">Enviar</button>
       </form>

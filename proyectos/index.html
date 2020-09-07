@@ -29,22 +29,41 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
+    <style>
+      body{
+        background-color: azure;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/acerca-de/">acerca de</a></li>
-          <li><a href="/proyectos/">proyectos</a></li>
-          <li><a href="/contacto/">contacto</a></li>
+          <a href="/"><li>home</li></a>
+          <a href="/acerca-de/"><li>acerca de</li></a>
+          <a href="/proyectos/"><li>proyectos</li></a>
+          <a href="/contacto/"><li>contacto</li></a>
         </ul>
-        <div>
-            <img src="" alt="github">
-            <img src="" alt="instagram">
-            <img src="" alt="facebook">
+        <div class="container">
+          <div class="row" id="socialIcons">
+            <div class="col-sm">
+              <a><img src="../src/images/Octicons-mark-github.svg" alt="github" /></a>
+            </div>
+            <div class="col-sm">
+              <a><img src="../src/images/Instagram_logo_2016.svg" alt="instagram" /></a>
+            </div>
+            <div class="col-sm">
+              <a><img src="../src/images/F_icon.svg" alt="facebook" /></a>
+            </div>
+          </div>
         </div>
       </nav>
+      <main>
+        <h1>
+          la <a href="/">recursion</a> es fuerte en este sitio?)
+        </h1>
+      </main>
     </header>
     <main>
       <h1>proyectos</h1>
