@@ -63,10 +63,21 @@ button{
 main h1,main h2{
     text-align: center;
 }
+main{
+    margin: 20px auto;
+}
 figure{
     text-align: center;
 }
 
 figure img{
     width: 250px;
+}
+
+.container {
+    margin: 20px auto;
+}
+
+.container img {
+    transition: 0.5s linear;
 }
