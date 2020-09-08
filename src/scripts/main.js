@@ -9,5 +9,5 @@ fetch('https://api.getform.io/v1/forms/97727371-d58f-46ef-a827-dab4209b654a?toke
     return response.json();
   })
   .then(function(myJson) {
-    console.log(myJson.data);
+    console.log(myJson.data.submissions);
   });
