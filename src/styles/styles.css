@@ -81,3 +81,12 @@ figure img{
 .container img {
     transition: 0.5s linear;
 }
+#projectos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projectos a {
+    margin: 20px
+}
