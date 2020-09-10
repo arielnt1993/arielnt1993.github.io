@@ -1,30 +1,26 @@
-console.log('test de '+document.title)
+
 
 function expander(x,bool){
     bool? x.style.width = "100px" : x.style.width = "50px";
 }
 
-function projectShow(){
-  fetch('https://api.github.com/users/arielnt1993/repos').then(function(response){
-    return response.json();
-  }).then(function(myJson){
-    myJson.map(function(x){
-      console.log(x)
-      document.getElementById('projectos').innerHTML += `<a href="${x.html_url}" target='_blank'>${x.name}</a>`
-    })
+async function projectShow(){
+  let response = await fetch('https://api.github.com/users/arielnt1993/repos')
+  let repos = await response.json()
+  repos.map(function(x){
+    console.log(x)
+    document.getElementById('projectos').innerHTML += `<a href="${x.html_url}" target="_blank">${x.name}</a>`
   })
 }
 
-fetch('https://api.getform.io/v1/forms/97727371-d58f-46ef-a827-dab4209b654a?token=NqibkSahVCDYgI91bhHW28VWNrfrNpt6GpGVMAKXzL5rY5du74z5LxSBN6Bo')
-  .then(function(response) {
-    return response.json();
+async function getNameOfContact(){
+  let response = await fetch('https://api.getform.io/v1/forms/97727371-d58f-46ef-a827-dab4209b654a?token=NqibkSahVCDYgI91bhHW28VWNrfrNpt6GpGVMAKXzL5rY5du74z5LxSBN6Bo');
+  let contact = await response.json()
+  let subs = contact.data.submissions
+  subs.map(function(x){
+    console.log(x.nombre)
+    document.getElementById('names').innerHTML += `<li>${x.nombre}</li>`
   })
-  .then(function(myJson) {
-    
-    console.log(myJson.data.submissions[0].nombre);
-    myJson.data.submissions.forEach(element => {
-      console.log(element.nombre)
-    });
-  });
+}
 
 

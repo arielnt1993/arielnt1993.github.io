@@ -36,15 +36,11 @@
       }
     </style>
     <script src="../src/scripts/main.js"></script>
-    <script>
-      $(window).ready(function () {
-        alert("este formulario es funcional, por favor sea ubicado");
-      });
-    </script>
+    
   </head>
-  <body>
+  <body onload="getNameOfContact()">
     <header>
-      <nav>
+      <nav class="navBar">
         <ul>
           <a href="/"><li>home</li></a>
           <a href="/acerca-de/"><li>acerca de</li></a>
@@ -68,6 +64,7 @@
     </header>
     <main>
       <h1>contacto</h1>
+      <div class="cont-container">
       <form action="https://getform.io/f/97727371-d58f-46ef-a827-dab4209b654a" method="POST">
         <div>
           <label>Nombre:</label>
@@ -87,6 +84,13 @@
         </div>
         <button type="submit">Enviar</button>
       </form>
+      <div id="contacts">
+        <h2>personas que me contactaron:</h2>
+        <ul id="names">
+          <!-- people who left a message -->
+        </ul>
+      </div>
+      </div>
     </main>
     <footer>
       <p>sitio demo</p>

@@ -9,10 +9,10 @@ a{
     text-align: center;
 }
 
-nav{
+.navBar{
     text-align: center;
 }
-ul{
+.navBar ul{
     margin: 0;
     padding: 10px 0;
     display: grid;
@@ -20,7 +20,7 @@ ul{
     background-color: black;
 }
 
-ul li{
+.navBar ul li{
     
     border-radius: 40px;
     width: 100px;
@@ -29,15 +29,15 @@ ul li{
     margin: 0 auto;
     transition: background-color 0.5s;
 }
-ul a{
+.navBar ul a{
     width: 50px;
     margin: 0 auto;;
 }
-li:hover{
+.navBar li:hover{
     background-color: dimgray;
     
 }
-a:hover{
+.navBar a:hover{
     text-decoration: none;
 }
 form{
@@ -55,6 +55,10 @@ form label, form input{
 }
 form label{
     margin-bottom: 0;
+}
+.cont-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 button{
     width: 100px;
